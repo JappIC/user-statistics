@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url(/assets/fonts/Quicksand/Quicksand-Regular.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Darker Grotesque';
+    src: url(/assets/fonts/DarkerGrotesque/DarkerGrotesque-Regular.woff2);
+    font-display: swap;
+}
+
+:root {
+    color-scheme: light dark;
+
+    /* Colors */
+    --c-scale-1: #212735;
+    --c-scale-2: #31394c;
+    --c-scale-3: #626975;
+    --c-text: #fefefd;
+    --c-company: #0075fd;
+    --c-positive: #679e92;
+    --c-negative: #a9616c;
+    --c-shadow: rgb(175, 175, 175);
+    --c-link: rgba(68, 68, 68, 1);
+
+    --c-statistics-1: #9959b5;
+    --c-statistics-2: #47526d;
+    --c-statistics-3: #19c6f7;
+    --c-statistics-4: #eda22e;
+    --c-statistics-5: #e84b37;
+    --c-statistics-6: #16d0b4;
+
+    /* Border */
+    --c-border: #2e3545;
+    --border: 1px solid var(--c-border);
+    --radius: 5px;
+
+    /* Shadows */
+    --shadow: 0 10px 60px -15px var(--c-shadow);
+    --shadow-hover: 0 10px 25px -10px var(--c-shadow);
+
+    /* Animations */
+    --transition: 0.3s;
+
+    /* Padding and Margin*/
+    --mp: 5vw;
+    --mp-s: 10px;
+    --mp-m: 25px;
+    --mp-l: 50px;
+    --mp-xl: 100px;
+    --mp-xxl: 200px;
+    --mp-xxxl: 500px;
+  
+    /* Font */
+    --font-title: "Quicksand";
+    --font-text: "Darker Grotesque";
+    --font-size-s: clamp(1rem, 1.1vw, 1.1rem);
+    --font-size-m: clamp(1.3rem, 1.3rem + 2vw, 1.3rem);
+    --font-size-l: clamp(1.5rem, 2vw, 2rem);
+    --font-size-xl: clamp(2rem, 2.5vw, 3rem);
+    --font-size-xxl: clamp(2.5rem, 16vw, 4.5rem);
+    --font-size-xxxl: clamp(2rem, 2.5vw, 3rem);
+  
+    /* Botón */
+    --c-btn: var(--c-company);
+    --bg-btn: var(--c-company2);
+  
+    /* Enlace */
+    --c-link-hover: var(--c-company);
+    --c-link-active: var(--c-company);
+  
+    /* Subrayado */
+    --c-selection: var(--c-company);
+}
+
+*{
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body{
+    line-height: 1.2;
+    background: var(--c-scale-1);
+}
+
+::selection {
+    background: var(--c-selection);
+    color: var(--bg-selection);
+}
