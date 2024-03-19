@@ -76,4 +76,19 @@
             }
         }
     }
+
+    @media (max-width: 1250px) {
+        nav{
+            padding: var(--mp-s);
+        }
+
+        nav ul {
+            gap: 20px;
+        }
+
+        nav ul li a{
+            width: 20px;
+            font-size: var(--font-size-s);
+        }
+    }
 </style>

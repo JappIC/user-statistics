@@ -27,6 +27,7 @@
         }
     }
 
+    /* NO PUEDO ANIDAR CSS DENTRO DE UNA MEDIA QUERIES PORQUE EL COMPILADOR DE SVELTE NO LO SOPORTA EN ESTA VERSIÓN */
     @media (max-width: 1250px) {
 
         div{

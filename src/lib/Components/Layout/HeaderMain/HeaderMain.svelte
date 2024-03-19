@@ -73,11 +73,8 @@
             margin-left: var(--mp-l);
             
 
-            & button{
-                
-                & svg{
-                    font-size: 1rem;
-                }
+            & button svg{
+                font-size: 1rem;   
             }
 
             & label {
@@ -144,13 +141,16 @@
             background-color: var(--c-scale-2);
             position: absolute;
             top: 70px;
-            left: 5px;
+            right: 5px;
             width: min-content;
             border: var(--border);
             padding: var(--mp-m);
             gap: var(--mp-m);
         }
-        
+
+        header div button{
+            display: block;
+        }
     }
 
     
