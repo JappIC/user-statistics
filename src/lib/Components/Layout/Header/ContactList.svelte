@@ -3,38 +3,38 @@
         {
             url: "https://www.google.com",
             name: "Messages",
-            avatar: "https://static-00.iconduck.com/assets.00/person-icon-256x256-vioef687.png"
+            avatar: "./assets/img/avatar.webp"
         },
         {
             url: "https://www.google.com",
             name: "Notification",
-            avatar: "https://static-00.iconduck.com/assets.00/person-icon-256x256-vioef687.png"
+            avatar: "./assets/img/avatar.webp"
         },
         {
             url: "https://www.google.com",
             name: "Friends",
-            avatar: "https://static-00.iconduck.com/assets.00/person-icon-256x256-vioef687.png"
+            avatar: "./assets/img/avatar.webp"
         },
         {
             url: "https://www.google.com",
             name: "Calendar",
-            avatar: "https://static-00.iconduck.com/assets.00/person-icon-256x256-vioef687.png"
+            avatar: "./assets/img/avatar.webp"
         },
         {
             url: "https://www.google.com",
             name: "Users",
-            avatar: "https://static-00.iconduck.com/assets.00/person-icon-256x256-vioef687.png"
+            avatar: "./assets/img/avatar.webp"
         },
         {
             url: "https://www.google.com",
             name: "Top charts",
-            avatar: "https://static-00.iconduck.com/assets.00/person-icon-256x256-vioef687.png"
+            avatar: "./assets/img/avatar.webp"
         }
     ]
 </script>
 
 <div class="contact-list">
-    <h2>Dashboards</h2>
+    <h2>Contacts</h2>
     <ul>
         {#each contactList as { url, name, avatar}}
         <li>
@@ -48,16 +48,14 @@
 
 <style>
     .contact-list{
-        grid-area: contact-list;
-        height: max-content;
-        align-self: start;
         padding: var(--mp-m);
         font-weight: bold;
+        border-top: var(--border);
+        height: min-content;
 
         & h2{
             margin-bottom: var(--mp-m);
             font-size: var(--font-size-s);
-            color: var(--c-scale-3);
         }
 
         & ul{
@@ -80,7 +78,7 @@
                         height: 8px;
                         background-color: var(--c-company);
                         border-radius: 50%;
-                        border: 3px solid var(--c-text); 
+                        border: 3px solid var(--c-scale-4); 
                         position: absolute;
                         left: 22px;
                         top: 0;

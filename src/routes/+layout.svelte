@@ -8,6 +8,7 @@ Layout principal de la app
     import '$lib/styles.css'
 
     import Header from "$lib/Components/Layout/Header/Header.svelte";
+	import HeaderMain from '../lib/Components/Layout/HeaderMain/HeaderMain.svelte';
     
 </script>
 
@@ -17,7 +18,10 @@ Layout principal de la app
     <Header />
 
     <main>
-        <slot></slot>
+        <HeaderMain/>
+        <div>
+            <slot></slot>
+        </div>
     </main>
   
 </div>
@@ -26,13 +30,12 @@ Layout principal de la app
     .theme {
         display: grid;
         grid-template-columns: auto 1fr;
-        gap: var(--mp-l);
         min-height: 100vh;
-    }
 
-    .theme main{
-        display: grid;
-        gap: var(--mp-l);
+        & main{
+            display: grid;
+            grid-template-rows: 60px 1fr;
+        }
     }
 
 </style>

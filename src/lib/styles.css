@@ -11,7 +11,7 @@
     --c-scale-1: #212735;
     --c-scale-2: #31394c;
     --c-scale-3: #626975;
-    --c-text: #fefefd;
+    --c-scale-4: #fefefd;
     --c-company: #0075fd;
     --c-positive: #679e92;
     --c-negative: #a9616c;
@@ -61,11 +61,31 @@
     --bg-btn: var(--c-company2);
   
     /* Enlace */
-    --c-link-hover: var(--c-company);
-    --c-link-active: var(--c-company);
+    --c-hover: var(--c-scale-4);
+    --c-active: var(--c-scale-4);
   
     /* Subrayado */
     --c-selection: var(--c-company);
+
+    @media (prefers-color-scheme: dark) {
+        color-scheme: dark;
+        
+        &:has( #dark-mode-button:checked) {
+            color-scheme: light;
+            --c-scale-1: #212735;
+            --c-scale-2: #31394c;
+            --c-scale-3: #626975;
+            --c-scale-4: #fefefd;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        color-scheme: light;
+
+        &:has(#dark-mode-button:checked) {
+            color-scheme: dark;
+        }
+    }
 }
 
 *{
@@ -86,14 +106,16 @@ body{
     background: var(--c-scale-1);
     font-family: var(--font-text);
     font-size: var(--font-size-s);
+    color: var(--c-scale-3);
+    box-sizing: border-box;
 
     & a{
         text-decoration: none;
-        color: var(--c-link);
+        color: var(--c-scale-3);
         transition: var(--transition);
     
         &:hover{
-            color: var(--c-text);
+            color: var(--c-hover);
         }
     }
 
@@ -101,4 +123,20 @@ body{
         list-style: none; 
         padding: 0;
     }
+
+    & button{
+        cursor: pointer;
+        color: var(--c-scale-3);
+        transition: var(--transition);
+        background-color: transparent;
+        border: none;
+
+        &:hover{
+            color: var(--c-scale-4);
+        }
+    }
+}
+
+.active{
+    color: var(--c-active);
 }

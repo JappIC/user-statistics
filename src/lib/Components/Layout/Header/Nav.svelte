@@ -1,4 +1,6 @@
 <script>
+    export let  navActive = false;
+    
     const list = [
         {
             url: "http://www.google.com",
@@ -54,7 +56,6 @@
 <style>
     nav {
         display: grid;
-        grid-area: nav;
         padding: var(--mp-m);
         align-items: center;
         

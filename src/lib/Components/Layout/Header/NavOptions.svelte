@@ -42,16 +42,12 @@
 
 <style>
     .nav-options{
-        grid-area: nav-options;
-        height: max-content;
         padding: var(--mp-m);
-        align-self: start;
         font-weight: bold;
 
         & h2{
             margin-bottom: var(--mp-m);
             font-size: var(--font-size-s);
-            color: var(--c-scale-3);
         }
 
         & ul{

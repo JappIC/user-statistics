@@ -4,13 +4,22 @@
 	import ContactList from "./ContactList.svelte";
 	import NavOptions from "./NavOptions.svelte";
 	import TitleApp from "./TitleApp.svelte";
+
+    let navActive = false;
+
+    // Funcion para ocultar o mostrar el navegador de opciones usando condicionales.
+    const btnNavActive = ()=>{
+        navActive = !navActive;
+    }
 </script>
 
 <header>
-    <ButtonNav/>
-    <TitleApp/>
-    <Nav/>
-    <div class="navs">
+    <div class="nav">
+        <ButtonNav on:click={btnNavActive}/>
+        <Nav/>
+    </div>
+    <div class="nav-options-user" class:navActive>
+        <TitleApp/>
         <NavOptions/>
         <ContactList/>
     </div>
@@ -21,19 +30,27 @@
 
     header{
         display: grid;
-        grid-template-areas:
-            "button-nav title-app"
-            "nav navs"
-        ;
-
         grid-template-columns: auto auto;
-        grid-template-rows: max-content;
 
-        & .navs{
-            grid-area: navs;
-            border-left: var(--border);
+        & > div{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        & .nav{
+            grid-template-rows: 60px 1fr;
             border-right: var(--border);
         }
+
+        & .nav-options-user{
+            grid-template-rows: 60px auto auto;
+            align-content: start;
+            border-right: var(--border);
+        }
+    }
+
+    .navActive{
+        display: none;
     }
 
     

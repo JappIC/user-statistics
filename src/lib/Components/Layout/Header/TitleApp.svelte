@@ -1,12 +1,21 @@
-<h1>Web Interface</h1>
+<div>
+    <h1>Web Interface</h1>
+</div>
+
 
 <style>
-    h1{
-        grid-area: title-app;
+    div{
         background: var(--c-scale-2);
-        padding: 20px;
-        border: var(--border);
-        border-top: 0;
-        font-size: var(--f-size-m);
+        border-bottom: var(--border);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & h1{    
+            font-size: var(--f-size-m);
+            color: var(--c-scale-4);
+        }
     }
+
+    
 </style>
